@@ -18,6 +18,7 @@
 				$target.slideToggle(settings.speed, function() {
 					$trigger.toggleClass(settings.toggledClass);
 				});
+				return false;
 			});
 		});
 
