@@ -1,0 +1,15 @@
+.dropdown {
+	padding-right: 10px;
+	background: url(images/spin-down.gif) no-repeat right;
+}
+.dropdown.closed { background-image: url(images/spin-up.gif); }
+.toggle-drop {
+	background-color: #eee;
+	width: 150px;
+	padding: 10px;
+	border:solid 1px #7F9FBF;
+	list-style: none;
+  	-moz-box-shadow: 3px 3px 5px gray;
+  	-webkit-box-shadow: 3px 3px 5px gray;
+  	box-shadow: 3px 3px 5px gray;
+}

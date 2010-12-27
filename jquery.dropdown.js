@@ -1,16 +1,25 @@
 (function($) {
-	$.fn.toggleDrop = function(target) {
-		var $trigger = $(this), $target = $(target);
-		$target.addClass('toggle-drop').css('display', 'none').css('position', 'absolute');
-		// if (settings && settings.align == 'right') $target.css('right', 0);
-		$trigger
-		.wrap('<div class="wrapper" style="position: relative; display: inline;">')
-		.append($target)
-		.click(function() {
-			$target.slideToggle(function() {
-				$trigger.toggleClass('closed');
+	$.fn.toggleDrop = function(options) {
+		var settings = $.extend({
+			align: 'left',
+			speed: 'normal',
+			toggledClass: 'closed'
+		}, options || {});
+
+		return this.each(function() {
+			var $trigger = $(this), $target = $trigger.next();
+			$target.addClass('toggle-drop').css({display: 'none', position: 'absolute', margin: 0})
+			.css(settings.align, 0);
+			$trigger
+			.wrap('<div class="dropdown-w" style="position: relative; display: inline;">')
+			.append($target)
+			.click(function() {
+				$('.toggle-drop').not($target).hide();
+				$target.slideToggle(settings.speed, function() {
+					$trigger.toggleClass(settings.toggledClass);
+				});
 			});
 		});
-		return this;
+
 	}
 })(jQuery);
