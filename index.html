@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>jquery.dropdown demo</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+  <script src="jquery.dropdown.js" type="text/javascript"></script>
+
+	<style type="text/css" media="screen">
+	body{font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+	.dropdown {
+		padding-right: 10px;
+		background: url(images/spin-down.gif) no-repeat right;
+	}
+	.dropdown.closed { background-image: url(images/spin-up.gif); }
+	.toggle-drop {
+		left: 0;
+		background-color: #fff;
+		margin: 0;
+		padding: 10px;
+		border:solid 1px #7F9FBF;
+		list-style: none;
+	}
+	</style>
+</head>
+
+<body>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue enim, ultrices sed cursus sit amet, dictum id sapien. Cras eu elit nec dolor iaculis commodo. Donec nec dolor at orci lobortis faucibus. Donec dolor orci, sodales vitae cursus non, feugiat venenatis ante. Aliquam sed lorem ut eros luctus pretium eget quis sapien. Duis eget elit sed turpis gravida ultrices. Nunc id rhoncus neque. Mauris venenatis vestibulum massa, sodales eleifend ligula hendrerit a. Quisque risus massa, commodo vitae lobortis vitae, commodo at odio. Integer eros tellus, consectetur ac mollis et, egestas at magna. In consequat feugiat urna, sit amet viverra diam tincidunt et. Nulla ut dapibus nibh. Donec diam libero, tempor sit amet scelerisque vel, tristique ut odio. Aenean lectus sem, ultrices a tempor et, faucibus at sem. Ut faucibus, tellus rhoncus mollis placerat, nulla dolor volutpat erat, nec imperdiet mi lorem id orci. Aliquam volutpat, eros vulputate fringilla accumsan, mi purus egestas dolor, id vestibulum nisl dolor eu risus. 
+</p>
+
+<a href="#">Some Link</a> |
+<a href="#" class="dropdown"><span>Click Here</span></a>
+<ul class="drop-me">
+	<li><a href="p1.html">Technology</a></li>
+	<li><a href="p2.html">Design</a></li>
+	<li><a href="p3.html">Css Gallery</a></li>
+	<li><a href="p4.html">Entertainment</a></li>
+	<li><a href="p5.html">Programming</a></li>
+</ul> |
+<a href="#">Some Link</a>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue enim, ultrices sed cursus sit amet, dictum id sapien. Cras eu elit nec dolor iaculis commodo. Donec nec dolor at orci lobortis faucibus. Donec dolor orci, sodales vitae cursus non, feugiat venenatis ante. Aliquam sed lorem ut eros luctus pretium eget quis sapien. Duis eget elit sed turpis gravida ultrices. Nunc id rhoncus neque. Mauris venenatis vestibulum massa, sodales eleifend ligula hendrerit a. Quisque risus massa, commodo vitae lobortis vitae, commodo at odio. Integer eros tellus, consectetur ac mollis et, egestas at magna. In consequat feugiat urna, sit amet viverra diam tincidunt et. Nulla ut dapibus nibh. Donec diam libero, tempor sit amet scelerisque vel, tristique ut odio. Aenean lectus sem, ultrices a tempor et, faucibus at sem. Ut faucibus, tellus rhoncus mollis placerat, nulla dolor volutpat erat, nec imperdiet mi lorem id orci. Aliquam volutpat, eros vulputate fringilla accumsan, mi purus egestas dolor, id vestibulum nisl dolor eu risus. 
+</p>
+
+
+<script type="text/javascript" charset="utf-8">
+$(function() {
+	$('.dropdown').toggleDrop('.drop-me');
+});
+</script>
+
+</body>
+</html>
