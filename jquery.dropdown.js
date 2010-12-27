@@ -12,7 +12,7 @@
 			.css(settings.align, 0);
 			$trigger
 			.wrap('<div class="dropdown-w" style="position: relative; display: inline;">')
-			.append($target)
+			.after($target)
 			.click(function() {
 				$('.toggle-drop').not($target).hide();
 				$target.slideToggle(settings.speed, function() {
